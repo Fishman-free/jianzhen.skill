@@ -54,19 +54,30 @@
 
 ## 安装方式
 
-### 方式一：Claude Code CLI
+### 方式一：npx 一键安装（推荐）
 
 ```bash
-# 将整个 skill 目录放入
-~/.claude/skills/jianzhen-perspective/
+npx github:Fishman-free/jianzhen.skill
+```
 
-# 重载
+> 无需提前安装任何依赖，Node.js 18+ 即可。脚本会自动将 Skill 文件复制到 `~/.claude/skills/jianzhen-perspective/`。
+
+安装完成后，在 Claude Code 中运行：
+
+```
 /reload-plugins
 ```
 
-### 方式二：手动复制
+### 方式二：git clone
 
-将本仓库的 `SKILL.md` 复制到你的 Claude skills 目录即可。
+```bash
+git clone https://github.com/Fishman-free/jianzhen.skill.git \
+  ~/.claude/skills/jianzhen-perspective
+```
+
+### 方式三：手动复制
+
+将本仓库的 `SKILL.md` 复制到 `~/.claude/skills/jianzhen-perspective/SKILL.md` 即可。
 
 ---
 
@@ -107,6 +118,8 @@
 jianzhen-perspective/
 ├── SKILL.md                        # 核心 Skill 文件
 ├── README.md                       # 本文件
+├── package.json                    # npx 入口配置
+├── install.js                      # 跨平台安装脚本
 └── references/
     └── research/
         ├── 01-writings.md          # 23部著作深度分析（693行）

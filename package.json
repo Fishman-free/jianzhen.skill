@@ -1,0 +1,16 @@
+{
+  "name": "jianzhen-perspective",
+  "version": "1.0.0",
+  "description": "简媜写作视角 Skill for Claude Code / Claude.ai",
+  "bin": {
+    "jianzhen-perspective": "./install.js"
+  },
+  "files": [
+    "install.js",
+    "SKILL.md",
+    "README.md",
+    "references/"
+  ],
+  "keywords": ["claude", "claude-code", "skill", "jianzhen", "prose", "writing"],
+  "license": "MIT"
+}
